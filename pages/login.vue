@@ -1,5 +1,5 @@
 <template>
-  <v-btn @click="this.$auth.loginWith('spotify')">Login</v-btn>
+  <v-btn @click="$auth.loginWith('spotify')">Login</v-btn>
 </template>
 
 <script lang="ts">
