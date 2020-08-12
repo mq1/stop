@@ -54,7 +54,25 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
+  router: {
+    middleware: ['auth']
+  },
+  auth: {
+    strategies: {
+      local: false,
+      spotify: {
+        _scheme: 'oauth2',
+        authorization_endpoint: 'https://accounts.spotify.com/authorize',
+        userinfo_endpoint: 'https://api.spotify.com/v1/me',
+        scope: ['playlist-read-private', 'user-top-read', 'user-read-recently-played'],
+        redirect_uri: 'http://localhost:3000/login',
+        client_id: '602adbe96b424384b1f72f8ffd867457',
+      }
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
