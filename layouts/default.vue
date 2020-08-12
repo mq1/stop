@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar app>
       <v-avatar v-if="$auth.loggedIn">
         <v-img :src="$auth.user.images[0].url" />
       </v-avatar>
@@ -8,22 +8,17 @@
       <v-toolbar-title v-if="$auth.loggedIn" v-text="$auth.user.display_name" />
       <v-toolbar-title v-if="$auth.loggedIn" v-text="title" />
       <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
+    <v-navigation-drawer v-model="drawer" app right>
       <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>mdi-repeat</v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+        <v-list-item :href="repo" target="_blank">
+          <v-list-item-title>Repo</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -35,13 +30,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      fixed: false,
-      right: true,
-      rightDrawer: false,
-      title: "'s vibe",
-    };
-  },
+  data: () => ({
+    fixed: false,
+    title: "'s vibe",
+    repo: "https://github.com/quarno/different-vibe",
+    drawer: null,
+  }),
 };
 </script>
