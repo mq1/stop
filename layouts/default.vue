@@ -1,12 +1,12 @@
 <template>
   <v-app dark>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-avatar>
+      <v-avatar v-if="$auth.loggedIn">
         <v-img :src="$auth.user.images[0].url" />
       </v-avatar>
       <v-spacer />
-      <v-toolbar-title v-text="$auth.user.display_name" />
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-if="$auth.loggedIn" v-text="$auth.user.display_name" />
+      <v-toolbar-title v-if="$auth.loggedIn" v-text="title" />
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>mdi-menu</v-icon>
