@@ -22,7 +22,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app>
+    <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -31,7 +31,6 @@
 <script>
 export default {
   data: () => ({
-    fixed: false,
     title: "'s vibe",
     repo: "https://github.com/quarno/different-vibe",
     drawer: null,
