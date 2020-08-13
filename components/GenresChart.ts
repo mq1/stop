@@ -13,22 +13,24 @@ export default class GenresChart extends Vue {
   private async getGenres(url: string) {
     let genres: { name: string; score: number }[] = [];
 
-    const res_data = await this.$axios.$get(url);
-    res_data.items.forEach((item: { genres: string[] }) => {
-      // for each artist, get their genres
-      item.genres.forEach((genre) => {
-        // increment genre score if it exists, otherwise add it
-        let item = genres.find((item) => item.name == genre);
-        if (item) genres[genres.indexOf(item)].score++;
-        else genres.push({ name: genre, score: 1 });
-      });
-    });
+    const tracks: { items: { artists: { id: string }[] }[] } = await this.$axios.$get(url);
+    for (const track of tracks.items) {
+      for (const artist of track.artists) {
+        let artistData: { genres: string[] } = await this.$axios.$get(`https://api.spotify.com/v1/artists/${artist.id}`)
+        for (const genre of artistData.genres) {
+          // increment genre score if it exists, otherwise add it
+          let item = genres.find((item) => item.name == genre);
+          if (item) genres[genres.indexOf(item)].score++;
+          else genres.push({ name: genre, score: 1 });
+        }
+      }
+    }
 
     return genres
   }
 
   async mounted() {
-    let genres: { name: string; score: number }[] = await this.getGenres("https://api.spotify.com/v1/me/top/artists")
+    let genres: { name: string; score: number }[] = await this.getGenres("https://api.spotify.com/v1/me/top/tracks")
 
     // sort array
     genres.sort((a, b) => b.score - a.score);
