@@ -10,12 +10,10 @@ const limit = 10;
 export default class GenresChart extends Vue {
   public renderChart!: (chartData: any, options: any) => void;
 
-  async mounted() {
+  private async getGenres(url: string) {
     let genres: { name: string; score: number }[] = [];
 
-    const res_data = await this.$axios.$get(
-      "https://api.spotify.com/v1/me/top/artists?limit=50"
-    );
+    const res_data = await this.$axios.$get(url);
     res_data.items.forEach((item: { genres: string[] }) => {
       // for each artist, get their genres
       item.genres.forEach((genre) => {
@@ -25,6 +23,12 @@ export default class GenresChart extends Vue {
         else genres.push({ name: genre, score: 1 });
       });
     });
+
+    return genres
+  }
+
+  async mounted() {
+    let genres: { name: string; score: number }[] = await this.getGenres("https://api.spotify.com/v1/me/top/artists")
 
     // sort array
     genres.sort((a, b) => b.score - a.score);
