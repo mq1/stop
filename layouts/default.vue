@@ -11,7 +11,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
@@ -28,13 +28,12 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
+<script>
+export default {
   data: () => ({
     title: "'s vibe",
     repo: "https://github.com/quarno/different-vibe",
     drawer: null,
-  }),
-});
+  })
+}
 </script>
