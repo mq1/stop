@@ -44,6 +44,6 @@ export default {
                 data: data,
                 backgroundColor: backgroundColor
             }]
-        })
+        }, { legend: { display: false } })
     }
 }
