@@ -1212,14 +1212,14 @@
     nanoid "^2.1.11"
 
 "@nuxtjs/axios@^5.12.1", "@nuxtjs/axios@^5.9.5":
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.12.1.tgz#e26f83bca926a135708deda258cd58b7dc1c958f"
-  integrity sha512-zRqCRN1Omp0aHZLbSlZTMH2i/2oafGJZbzBM1Aw0KzfwphofNJBIq0ue2k+fgbVXSX6fj53FNxL50sAwaGyAMA==
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.12.2.tgz#ff0d15ba5d3442dcbd12245f864effec3bea3cde"
+  integrity sha512-MKSuwHRgLTw1tMS1mDf+7XIvQLvF8GlK3rtuJY4lNmZVxYiBYhG3Nd6OrtH07fljNmvL7/JIUzk+1o/tVS6Pkg==
   dependencies:
     "@nuxtjs/proxy" "^2.0.1"
-    axios "^0.19.2"
+    axios "^0.20.0"
     axios-retry "^3.1.8"
-    consola "^2.14.0"
+    consola "^2.15.0"
     defu "^3.1.0"
 
 "@nuxtjs/proxy@^2.0.1":
@@ -1831,12 +1831,12 @@ axios-retry@^3.1.8:
   dependencies:
     is-retry-allowed "^1.1.0"
 
-axios@^0.19.2:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
-  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+axios@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
+  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
   dependencies:
-    follow-redirects "1.5.10"
+    follow-redirects "^1.10.0"
 
 babel-loader@^8.1.0:
   version "8.1.0"
@@ -2238,9 +2238,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111, caniuse-lite@^1.0.30001114:
-  version "1.0.30001117"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001117.tgz#69a9fae5d480eaa9589f7641a83842ad396d17c4"
-  integrity sha512-4tY0Fatzdx59kYjQs+bNxUwZB03ZEBgVmJ1UkFPz/Q8OLiUUbjct2EdpnXj0fvFTPej2EkbPIG0w8BWsjAyk1Q==
+  version "1.0.30001118"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001118.tgz#116a9a670e5264aec895207f5e918129174c6f62"
+  integrity sha512-RNKPLojZo74a0cP7jFMidQI7nvLER40HgNfgKQEJ2PFm225L0ectUungNQoK3Xk3StQcFbpBPNEvoWD59436Hg==
 
 chalk@^1.1.3:
   version "1.1.3"
@@ -2942,13 +2942,6 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
-debug@=3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
-  dependencies:
-    ms "2.0.0"
-
 debug@^4.1.0, debug@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
@@ -3165,9 +3158,9 @@ ejs@^2.6.1:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.523:
-  version "1.3.545"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.545.tgz#d9add694c78554b8c00bc6e6fc929d5ccd7d1b99"
-  integrity sha512-+0R/i17u5E1cwF3g0W8Niq3UUKTUMyyT4kLkutZUHG8mDNvFsAckK3HIanzGVtixe3b6rknD8k7gHiR6nKFkgg==
+  version "1.3.548"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.548.tgz#b1bda6b24f7a1c1fa6250bb039a0bbed148f26f2"
+  integrity sha512-Xf4m3GFwCEcQ+4W45IHeZ6enPC1i+8/3aaXz8Pcd2VkNLULP0DMvoP7aKv2tQ+M/CH2SC7Qlm4S6DpzZUS2w1Q==
 
 elliptic@^6.5.3:
   version "6.5.3"
@@ -3336,9 +3329,9 @@ etag@^1.8.1, etag@~1.8.1:
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
 eventemitter3@^4.0.0:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.5.tgz#51d81e4f1ccc8311a04f0c20121ea824377ea6d9"
-  integrity sha512-QR0rh0YiPuxuDQ6+T9GAO/xWTExXpxIes1Nl9RykNGTnE1HJmkuEfxJH9cubjIOQZ/GH4qNBR4u8VSHaKiWs4g==
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.6.tgz#1258f6fa51b4908aadc2cd624fcd6e64f99f49d6"
+  integrity sha512-s3GJL04SQoM+gn2c14oyqxvZ3Pcq7cduSDqy3sBFXx6UPSUmgVYwQM9zwkTn9je0lrfg0gHEwR42pF3Q2dCQkQ==
 
 events@^3.0.0:
   version "3.2.0"
@@ -3624,14 +3617,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@1.5.10:
-  version "1.5.10"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
-  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
-  dependencies:
-    debug "=3.1.0"
-
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
@@ -7757,9 +7743,9 @@ vuetify-loader@^1.4.3:
     loader-utils "^1.2.0"
 
 vuetify@^2:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.3.9.tgz#6dcd1de647e1ce2c7cfaebb7068a0cf8929360b3"
-  integrity sha512-E5K9flTvS21tCkHgqDBMl0BY/Rld4SLUaJpQ+sQdL8/2uPcWmWLrdumn4SI8LBFojE0UP1GSaH4zKuxLL36fYg==
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.3.10.tgz#c8cbc77ee1224b5a132f501a3762dee6d8c95a06"
+  integrity sha512-KzL/MhZ7ajubm9kwbdCoA/cRV50RX+a5Hcqiwt7Am1Fni2crDtl2no05UNwKroTfscrYYf07gq3WIFSurPsnCA==
 
 vuex@^3.5.1:
   version "3.5.1"
