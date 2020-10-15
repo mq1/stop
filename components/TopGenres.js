@@ -13,7 +13,7 @@ export default {
         let data = [];
 
         const tracks = await this.$axios.$get(
-            "https://api.spotify.com/v1/me/top/tracks?limit=50"
+            "https://api.spotify.com/v1/me/top/tracks"
         );
         for (let track of tracks.items) {
             for (const artist of track.artists) {
