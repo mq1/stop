@@ -23,7 +23,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() }} Manuel Quarneti</span>
     </v-footer>
   </v-app>
 </template>
