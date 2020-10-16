@@ -6,7 +6,7 @@
 import GenreChart from "./GenreChart.vue";
 
 export default {
-  name: "RecentGenresContainer",
+  name: "RecentGenres",
   components: { GenreChart },
   data: () => ({
     loaded: false,
@@ -19,7 +19,7 @@ export default {
     const tracks = await this.$axios.$get(
       "https://api.spotify.com/v1/me/player/recently-played"
     );
-    for (let track of tracks.items) {
+    for (const track of tracks.items) {
       for (const artist of track.track.artists) {
         let artistData = await this.$axios.$get(
           `https://api.spotify.com/v1/artists/${artist.id}`
