@@ -1,9 +1,9 @@
 <script>
-import { Doughnut } from "vue-chartjs";
-import 'chartjs-plugin-colorschemes';
+import { HorizontalBar } from "vue-chartjs";
+import "chartjs-plugin-colorschemes";
 
 export default {
-  extends: Doughnut,
+  extends: HorizontalBar,
   props: {
     chartdata: {
       type: Object,
@@ -17,6 +17,15 @@ export default {
         colorschemes: {
           scheme: "brewer.Paired12",
         },
+      },
+      scales: {
+        xAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
       },
     },
   }),
