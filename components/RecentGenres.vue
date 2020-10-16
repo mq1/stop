@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <genre-chart v-if="loaded" :chartdata="chartdata" :options="options" />
-  </div>
+  <genre-chart v-if="loaded" :chartdata="chartdata" :options="options" />
 </template>
 
 <script>
