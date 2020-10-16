@@ -1,5 +1,9 @@
 # different-vibe
 
+Spotify user stats
+
+Inspired by [Nicholas-Lin/vibe](https://github.com/Nicholas-Lin/vibe)
+
 ## Build Setup
 
 ```bash
@@ -31,4 +35,4 @@ Required environment variables:
 * [Nuxt.js/auth](https://github.com/nuxt-community/auth-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/auth-module/dev/LICENSE))
 * [Chart.js](https://github.com/chartjs/Chart.js) ([LICENSE](https://raw.githubusercontent.com/chartjs/Chart.js/master/LICENSE.md))
 * [vue-chartjs](https://github.com/apertureless/vue-chartjs) ([LICENSE](https://raw.githubusercontent.com/apertureless/vue-chartjs/develop/LICENSE.txt))
-* [google/palette.js](https://github.com/google/palette.js) ([LICENSE](https://raw.githubusercontent.com/google/palette.js/master/LICENSE))
+* [chartjs-plugin-colorschemes](https://github.com/nagix/chartjs-plugin-colorschemes) ([LICENSE](https://raw.githubusercontent.com/nagix/chartjs-plugin-colorschemes/master/LICENSE.md))
