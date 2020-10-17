@@ -1,10 +1,10 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col v-for="card in cards" :key="card.name">
-        <v-card class="mx-auto" outlined>
-          <v-rating v-model="card.score" :length="length" />
-          <v-card-title v-text="card.name"></v-card-title>
+      <v-col v-for="genre in genres" :key="genre.name">
+        <v-card outlined>
+          <v-rating v-model="genre.score" :length="length" />
+          <v-card-title v-text="genre.name"></v-card-title>
         </v-card>
       </v-col>
     </v-row>
@@ -15,7 +15,7 @@
 export default {
   props: ["timeRange"],
   data: () => ({
-    cards: [],
+    genres: [],
     length: 0,
   }),
   async fetch() {
@@ -44,7 +44,7 @@ export default {
     scoresArray.sort((first, second) => second.score - first.score);
 
     // get only 10 items
-    this.cards = scoresArray.slice(0, 10);
+    this.genres = scoresArray.slice(0, 10);
   },
 };
 </script>

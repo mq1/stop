@@ -1,15 +1,15 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col v-for="card in cards" :key="card.name">
-        <v-card max-width="200px" class="mx-auto">
+      <v-col v-for="artist in artists" :key="artist.name">
+        <v-card>
           <v-img
-            :src="card.src"
+            :src="artist.src"
             class="white--text align-end"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
           >
-            <v-card-title v-text="card.name"></v-card-title>
+            <v-card-title v-text="artist.name"></v-card-title>
           </v-img>
         </v-card>
       </v-col>
@@ -21,15 +21,15 @@
 export default {
   props: ["timeRange"],
   data: () => ({
-    cards: [],
+    artists: [],
   }),
   async fetch() {
     const artists = await this.$axios.$get(
-      `https://api.spotify.com/v1/me/top/artists?limit=10&time_range=${this.timeRange}`
+      `https://api.spotify.com/v1/me/top/artists?limit=9&time_range=${this.timeRange}`
     );
 
     for (const artist of artists.items) {
-      this.cards.push({
+      this.artists.push({
         name: artist.name,
         src: artist.images[0].url,
       });
