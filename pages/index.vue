@@ -1,20 +1,18 @@
 <template>
-  <div>
-    <v-card class="mt-4">
-      <Genres time-range="long_term" />
-      <v-card-title>Your favorite genres</v-card-title>
-    </v-card>
-    <v-card class="mt-4">
-      <Genres time-range="short_term" />
-      <v-card-title>Your recent genres</v-card-title>
-    </v-card>
-    <v-card class="mt-4">
-      <Artists time-range="long_term" />
-      <v-card-title>Your top artists</v-card-title>
-    </v-card>
-    <v-card class="mt-4">
-      <Artists time-range="short_term" />
-      <v-card-title>Your recent artists</v-card-title>
-    </v-card>
-  </div>
+  <v-container fluid>
+    <v-row dense>
+      <v-col cols="6">
+        <GenresCard title="Your favorite genres" time-range="long_term" />
+      </v-col>
+      <v-col cols="6">
+        <GenresCard title="Your recent genres" time-range="short_term" />
+      </v-col>
+      <v-col cols="12">
+        <ArtistsCard title="Your favorite artists" time-range="long_term" />
+      </v-col>
+      <v-col cols="12">
+        <ArtistsCard title="Your recent artists" time-range="short_term" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>

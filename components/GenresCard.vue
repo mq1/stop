@@ -1,19 +1,22 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-col v-for="genre in genres" :key="genre.name">
-        <v-card outlined>
-          <v-rating v-model="genre.score" :length="length" />
-          <v-card-title v-text="genre.name"></v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-card class="mt-4 mx-auto">
+    <v-card-title v-text="title"></v-card-title>
+    <v-container fluid>
+      <v-row dense>
+        <v-col v-for="genre in genres" :key="genre.name" cols="12">
+          <v-card outlined>
+            <v-rating v-model="genre.score" :length="length" readonly />
+            <v-card-title v-text="genre.name"></v-card-title>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
 export default {
-  props: ["timeRange"],
+  props: ["timeRange", "title"],
   data: () => ({
     genres: [],
     length: 0,
