@@ -2,7 +2,7 @@
 
 Spotify user stats
 
-Inspired by [Nicholas-Lin/vibe](https://github.com/Nicholas-Lin/vibe)
+Inspired by [Nicholas-Lin/vibe](https://github.com/Nicholas-Lin/vibe) and [Obscurify](https://github.com/alexolivero/Obscurify)
 
 ## Build Setup
 
