@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
-    <v-row dense>
+    <v-row>
       <v-col v-for="card in cards" :key="card.name">
-        <v-card max-width="400" class="mx-auto">
+        <v-card max-width="200px" class="mx-auto">
           <v-img
             :src="card.src"
             class="white--text align-end"

@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-card class="mt-4">
-      <GenreChartContainer time-range="long_term" />
+      <Genres time-range="long_term" />
       <v-card-title>Your favorite genres</v-card-title>
     </v-card>
     <v-card class="mt-4">
-      <GenreChartContainer time-range="short_term" />
+      <Genres time-range="short_term" />
       <v-card-title>Your recent genres</v-card-title>
     </v-card>
     <v-card class="mt-4">

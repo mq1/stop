@@ -33,6 +33,4 @@ Required environment variables:
 * [Nuxt.js](https://github.com/nuxt/nuxt.js) ([LICENSE](https://raw.githubusercontent.com/nuxt/nuxt.js/dev/LICENSE))
 * [Nuxt.js/axios](https://github.com/nuxt-community/axios-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/axios-module/master/LICENSE))
 * [Nuxt.js/auth](https://github.com/nuxt-community/auth-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/auth-module/dev/LICENSE))
-* [Chart.js](https://github.com/chartjs/Chart.js) ([LICENSE](https://raw.githubusercontent.com/chartjs/Chart.js/master/LICENSE.md))
-* [vue-chartjs](https://github.com/apertureless/vue-chartjs) ([LICENSE](https://raw.githubusercontent.com/apertureless/vue-chartjs/develop/LICENSE.txt))
-* [chartjs-plugin-colorschemes](https://github.com/nagix/chartjs-plugin-colorschemes) ([LICENSE](https://raw.githubusercontent.com/nagix/chartjs-plugin-colorschemes/master/LICENSE.md))
+* [Vuetify](https://github.com/vuetifyjs/vuetify) ([LICENSE](https://raw.githubusercontent.com/vuetifyjs/vuetify/master/LICENSE.md))
