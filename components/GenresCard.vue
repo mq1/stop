@@ -1,15 +1,16 @@
 <template>
-  <v-card class="mt-4 mx-auto">
-    <v-card-title v-text="title"></v-card-title>
+  <v-card>
     <v-container fluid>
-      <v-row dense>
-        <v-col v-for="genre in genres" :key="genre.name" cols="12">
-          <v-card outlined>
-            <v-rating v-model="genre.score" :length="length" readonly />
-            <v-card-title v-text="genre.name"></v-card-title>
-          </v-card>
-        </v-col>
-      </v-row>
+      <v-card-title v-text="title"></v-card-title>
+      <v-card
+        v-for="(genre, i) in genres"
+        :key="genre.name"
+        class="mt-4 mx-auto"
+        outlined
+      >
+        <v-card-title v-text="genre.name" />
+        <v-card-subtitle v-text="i + 1" />
+      </v-card>
     </v-container>
   </v-card>
 </template>
