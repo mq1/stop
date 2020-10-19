@@ -1,15 +1,8 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  /*
-  ** Nuxt target
-  ** See https://nuxtjs.org/api/configuration-target
-  */
+  // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  /*
-  ** Headers of the page
-  ** See https://nuxtjs.org/api/configuration-head
-  */
+
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
@@ -22,38 +15,36 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Global CSS
-  */
+
+  // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
-  /*
-  ** Plugins to load before mounting the App
-  ** https://nuxtjs.org/guide/plugins
-  */
+
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
   ],
-  /*
-  ** Auto import components
-  ** See https://nuxtjs.org/api/configuration-components
-  */
+
+  // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-  /*
-  ** Nuxt.js dev-modules
-  */
+
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
+    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
-  /*
-  ** Nuxt.js modules
-  */
+
+  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth'
   ],
+
   router: {
     middleware: ['auth']
   },
+
   auth: {
     strategies: {
       local: false,
@@ -61,37 +52,24 @@ export default {
         _scheme: 'oauth2',
         authorization_endpoint: 'https://accounts.spotify.com/authorize',
         userinfo_endpoint: 'https://api.spotify.com/v1/me',
-        scope: ['playlist-read-private', 'user-top-read', 'user-read-recently-played'],
+        scope: ['user-top-read'],
         redirect_uri: process.env.BASE_URL + '/login',
         client_id: process.env.SPOTIFY_CLIENT_ID,
       }
     }
   },
+
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
+      dark: true
     }
   },
-  /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
+
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
 }

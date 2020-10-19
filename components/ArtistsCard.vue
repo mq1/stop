@@ -20,12 +20,21 @@
   </v-card>
 </template>
 
-<script>
-export default {
-  props: ["timeRange", "title"],
-  data: () => ({
-    artists: [],
-  }),
+<script lang="ts">
+import { Vue, Component, Prop } from "nuxt-property-decorator";
+
+interface Artist {
+  name: string;
+  src: string;
+}
+
+@Component
+export default class ArtistsCard extends Vue {
+  @Prop({ type: String, required: true }) readonly title!: String;
+  @Prop({ type: String, required: true }) readonly timeRange!: String;
+
+  artists: Artist[] = [];
+
   async fetch() {
     const artists = await this.$axios.$get(
       `https://api.spotify.com/v1/me/top/artists?limit=9&time_range=${this.timeRange}`
@@ -37,6 +46,6 @@ export default {
         src: artist.images[0].url,
       });
     }
-  },
-};
+  }
+}
 </script>

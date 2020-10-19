@@ -1,37 +1,24 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-app-bar app>
       <v-avatar v-if="$auth.loggedIn">
         <v-img :src="$auth.user.images[0].url" />
       </v-avatar>
       <v-spacer />
-      <v-toolbar-title v-if="$auth.loggedIn" v-text="$auth.user.display_name" />
-      <v-toolbar-title v-if="$auth.loggedIn" v-text="title" />
+      <v-toolbar-title
+        v-if="$auth.loggedIn"
+        v-text="$auth.user.display_name + '\'s vibe'"
+      />
       <v-spacer />
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-btn href="https://github.com/quarno/different-vibe" target="_blank" icon>
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-main>
       <nuxt />
     </v-main>
-    <v-navigation-drawer v-model="drawer" app right>
-      <v-list>
-        <v-list-item :href="repo" target="_blank">
-          <v-list-item-title>Repo</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }} Manuel Quarneti</span>
+      <span>© 2020 Manuel Quarneti</span>
     </v-footer>
   </v-app>
 </template>
-
-<script>
-export default {
-  data: () => ({
-    title: "'s vibe",
-    repo: "https://github.com/quarno/different-vibe",
-    drawer: null,
-  })
-}
-</script>
