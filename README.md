@@ -25,7 +25,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 Required environment variables:
 
-* `BASE_URL`: for example `https://different-vibe.quarno.xyz`
+* `BASE_URL`: for example `https://vibe.quarno.xyz`
 * `SPOTIFY_CLIENT_ID`: for example `602adbe96b424384b1f72f8ffd867457`
 
 ## Using
