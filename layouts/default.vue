@@ -7,7 +7,7 @@
         </b-navbar-item>
       </template>
       <template slot="end">
-        <b-navbar-item href="https://github.com/quarno/different-vibe">
+        <b-navbar-item href="https://github.com/quarno/stop">
           <b-icon icon="github" />
         </b-navbar-item>
       </template>

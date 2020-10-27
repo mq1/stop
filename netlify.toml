@@ -1,4 +1,4 @@
 [build]
     publish = "dist/"
     command = "yarn generate"
-    environment = { BASE_URL = "https://vibe.quarno.xyz", SPOTIFY_CLIENT_ID = "602adbe96b424384b1f72f8ffd867457" }
+    environment = { BASE_URL = "https://stop.quarno.xyz", SPOTIFY_CLIENT_ID = "602adbe96b424384b1f72f8ffd867457" }
