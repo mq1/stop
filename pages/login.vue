@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
-    <v-btn @click="$auth.loginWith('spotify')">Login</v-btn>
-  </v-container>
+  <section>
+    <b-button @click="$auth.loginWith('spotify')">Login</b-button>
+  </section>
 </template>

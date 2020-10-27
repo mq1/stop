@@ -1,18 +1,10 @@
 <template>
-  <v-card>
-    <v-container fluid>
-      <v-card-title v-text="title"></v-card-title>
-      <v-card
-        v-for="(genre, i) in genres"
-        :key="genre.name"
-        class="mt-4 mx-auto"
-        outlined
-      >
-        <v-card-title v-text="genre.name" />
-        <v-card-subtitle v-text="i + 1" />
-      </v-card>
-    </v-container>
-  </v-card>
+  <div class="tile is-parent is-vertical">
+    <p class="title" v-text="title" />
+    <div class="tile is-child box" v-for="genre in genres" :key="genre.name">
+      <p class="subtitle" v-text="genre.name" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -24,7 +16,7 @@ interface Genre {
 }
 
 @Component
-export default class GenresCard extends Vue {
+export default class GenresTile extends Vue {
   @Prop({ type: String, required: true }) readonly title!: String;
   @Prop({ type: String, required: true }) readonly timeRange!: String;
 

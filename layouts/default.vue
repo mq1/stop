@@ -1,24 +1,24 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-avatar v-if="$auth.loggedIn">
-        <v-img :src="$auth.user.images[0].url" />
-      </v-avatar>
-      <v-spacer />
-      <v-toolbar-title
-        v-if="$auth.loggedIn"
-        v-text="$auth.user.display_name + '\'s vibe'"
-      />
-      <v-spacer />
-      <v-btn href="https://github.com/quarno/different-vibe" target="_blank" icon>
-        <v-icon>mdi-github</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-main>
-      <nuxt />
-    </v-main>
-    <v-footer app>
-      <span>© 2020 Manuel Quarneti</span>
-    </v-footer>
-  </v-app>
+  <div>
+    <b-navbar>
+      <template slot="brand" v-if="$auth.loggedIn">
+        <b-navbar-item>
+          <b-image :src="$auth.user.images[0].url" />
+        </b-navbar-item>
+      </template>
+      <template slot="end">
+        <b-navbar-item href="https://github.com/quarno/different-vibe">
+          <b-icon icon="github" />
+        </b-navbar-item>
+      </template>
+    </b-navbar>
+
+    <nuxt />
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>© 2020 Manuel Quarneti</p>
+      </div>
+    </footer>
+  </div>
 </template>

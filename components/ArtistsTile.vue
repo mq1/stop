@@ -1,23 +1,19 @@
 <template>
-  <v-card class="mt-4 mx-auto">
-    <v-card-title v-text="title"></v-card-title>
-    <v-container fluid>
-      <v-row dense>
-        <v-col v-for="artist in artists" :key="artist.name" cols="4">
-          <v-card>
-            <v-img
-              :src="artist.src"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title v-text="artist.name"></v-card-title>
-            </v-img>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-card>
+  <div class="tile is-parent is-vertical">
+    <p class="title" v-text="title" />
+    <div class="tile is-child" v-for="artist in artists" :key="artist.name">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            <b-image ratio="4by3" :src="artist.src" />
+          </figure>
+        </div>
+        <div class="card-content is-overlay">
+          <span class="tag is-primary" v-text="artist.name" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -29,7 +25,7 @@ interface Artist {
 }
 
 @Component
-export default class ArtistsCard extends Vue {
+export default class ArtistsSection extends Vue {
   @Prop({ type: String, required: true }) readonly title!: String;
   @Prop({ type: String, required: true }) readonly timeRange!: String;
 

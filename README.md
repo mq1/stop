@@ -30,10 +30,11 @@ Required environment variables:
 
 ## Using
 
-* [Nuxt.js](https://github.com/nuxt/nuxt.js) ([LICENSE](https://raw.githubusercontent.com/nuxt/nuxt.js/dev/LICENSE))
+* [nuxt](https://github.com/nuxt/nuxt.js) ([LICENSE](https://raw.githubusercontent.com/nuxt/nuxt.js/dev/LICENSE))
 * [nuxt/typescript](https://github.com/nuxt/typescript) ([LICENSE](https://raw.githubusercontent.com/nuxt/typescript/master/LICENSE))
-* [Nuxt.js/axios](https://github.com/nuxt-community/axios-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/axios-module/master/LICENSE))
-* [Nuxt.js/auth](https://github.com/nuxt-community/auth-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/auth-module/dev/LICENSE))
+* [nuxtjs/axios](https://github.com/nuxt-community/axios-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/axios-module/master/LICENSE))
+* [nuxtjs/auth](https://github.com/nuxt-community/auth-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/auth-module/dev/LICENSE))
+* [nuxtjs/pwa](https://github.com/nuxt-community/pwa-module) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/pwa-module/master/LICENSE))
 * [nuxt-property-decorator](https://github.com/nuxt-community/nuxt-property-decorator) ([LICENSE](https://raw.githubusercontent.com/nuxt-community/nuxt-property-decorator/master/LICENSE))
 * [core-js](https://github.com/zloirock/core-js) ([LICENSE](https://raw.githubusercontent.com/zloirock/core-js/master/LICENSE))
-* [Vuetify](https://github.com/vuetifyjs/vuetify) ([LICENSE](https://raw.githubusercontent.com/vuetifyjs/vuetify/master/LICENSE.md))
+* [nuxt-buefy](https://github.com/buefy/nuxt-buefy) ([LICENSE](https://raw.githubusercontent.com/buefy/nuxt-buefy/master/LICENSE))
