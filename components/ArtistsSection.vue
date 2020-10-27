@@ -1,19 +1,21 @@
 <template>
-  <div class="tile is-parent is-vertical">
-    <p class="title" v-text="title" />
-    <div class="tile is-child" v-for="artist in artists" :key="artist.name">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image">
-            <b-image ratio="4by3" :src="artist.src" />
-          </figure>
-        </div>
-        <div class="card-content is-overlay">
-          <span class="tag is-primary" v-text="artist.name" />
+  <section class="section">
+    <div class="container">
+      <p class="title" v-text="title" />
+      <div class="columns is-multiline">
+        <div class="column is-4" v-for="artist in artists" :key="artist.name">
+          <div class="card">
+            <div class="card-image">
+              <b-image ratio="4by3" :src="artist.src" />
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="subtitle" v-text="artist.name" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
