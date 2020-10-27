@@ -8,9 +8,9 @@
             <div class="card-image">
               <b-image ratio="4by3" :src="artist.src" />
             </div>
-          </div>
-          <div class="card-content">
-            <p class="subtitle" v-text="artist.name" />
+            <div class="card-content">
+              <p class="subtitle" v-text="artist.name" />
+            </div>
           </div>
         </div>
       </div>
