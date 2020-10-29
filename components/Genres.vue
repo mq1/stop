@@ -1,7 +1,6 @@
 <template>
-  <div class="tile is-parent is-vertical">
-    <p class="title" v-text="title" />
-    <div class="tile is-child box" v-for="genre in genres" :key="genre.name">
+  <div>
+    <div class="box" v-for="genre in genres" :key="genre.name">
       <p class="subtitle" v-text="genre.name" />
     </div>
   </div>
@@ -16,8 +15,7 @@ interface Genre {
 }
 
 @Component
-export default class GenresTile extends Vue {
-  @Prop({ type: String, required: true }) readonly title!: String;
+export default class Genres extends Vue {
   @Prop({ type: String, required: true }) readonly timeRange!: String;
 
   genres: Genre[] = [];
