@@ -1,16 +1,5 @@
 <template>
-  <div class="columns is-multiline">
-    <div class="column is-4" v-for="artist in artists" :key="artist.name">
-      <div class="card">
-        <div class="card-image">
-          <b-image ratio="4by3" :src="artist.src" />
-        </div>
-        <div class="card-content">
-          <p class="subtitle" v-text="artist.name" />
-        </div>
-      </div>
-    </div>
-  </div>
+  <user-top :items="artists" />
 </template>
 
 <script lang="ts">

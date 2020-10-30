@@ -1,16 +1,5 @@
 <template>
-  <div class="columns is-multiline">
-    <div class="column is-4" v-for="track in tracks" :key="track.name">
-      <div class="card">
-        <div class="card-image">
-          <b-image ratio="4by3" :src="track.src" />
-        </div>
-        <div class="card-content">
-          <p class="subtitle" v-text="track.name" />
-        </div>
-      </div>
-    </div>
-  </div>
+  <user-top :items="tracks" />
 </template>
 
 <script lang="ts">
