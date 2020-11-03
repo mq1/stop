@@ -3,11 +3,11 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <h2 class="title">Your favorite genres</h2>
+          <h2 class="title has-text-light">Your favorite genres</h2>
           <genres time-range="long_term" />
         </div>
         <div class="column">
-          <h2 class="title">Your recent genres</h2>
+          <h2 class="title has-text-light">Your recent genres</h2>
           <genres time-range="short_term" />
         </div>
       </div>

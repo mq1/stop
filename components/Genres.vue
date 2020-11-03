@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="box" v-for="genre in genres" :key="genre.name">
-      <p class="subtitle" v-text="genre.name" />
+    <div class="box has-background-black" v-for="genre in genres" :key="genre.name">
+      <p class="subtitle has-text-light" v-text="genre.name" />
     </div>
   </div>
 </template>
