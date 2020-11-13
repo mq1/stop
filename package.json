@@ -1,24 +1,19 @@
 {
-  "name": "stop",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate"
-  },
-  "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.0",
-    "@nuxtjs/auth": "^4.9.1",
-    "@nuxtjs/axios": "^5.12.2",
-    "core-js": "^3.7.0",
-    "nuxt": "^2.14.6",
-    "nuxt-buefy": "^0.4.4",
-    "nuxt-property-decorator": "^2.8.8"
-  },
-  "devDependencies": {
-    "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3"
-  }
+    "name": "stop",
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "start": "nuxt start"
+    },
+    "dependencies": {
+        "@nuxtjs/auth": "^4.9.1",
+        "@nuxtjs/axios": "^5.12.2",
+        "nuxt": "^2.14.7",
+        "nuxt-buefy": "^0.4.4"
+    },
+    "devDependencies": {
+        "@nuxt/types": "^2.14.7",
+        "@nuxt/typescript-build": "^2.0.3"
+    }
 }

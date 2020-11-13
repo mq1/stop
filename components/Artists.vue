@@ -3,18 +3,28 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "nuxt-property-decorator";
+import Vue, { PropOptions } from "vue";
 
 interface Artist {
   name: string;
   src: string;
 }
 
-@Component
-export default class Artists extends Vue {
-  @Prop({ type: String, required: true }) readonly timeRange!: String;
+export default Vue.extend({
+  name: "Artists",
 
-  artists: Artist[] = [];
+  props: {
+    timeRange: {
+      type: String,
+      required: true,
+    } as PropOptions<String>,
+  },
+
+  data() {
+    return {
+      artists: [] as Artist[],
+    };
+  },
 
   async fetch() {
     const artists = await this.$axios.$get(
@@ -27,6 +37,6 @@ export default class Artists extends Vue {
         src: artist.images[0].url,
       });
     }
-  }
-}
+  },
+});
 </script>

@@ -1,12 +1,12 @@
 <template>
   <div class="columns is-multiline">
     <div class="column is-4" v-for="item in items" :key="item.name">
-      <div class="card has-background-black">
+      <div class="card">
         <div class="card-image">
           <b-image ratio="4by3" :src="item.src" />
         </div>
         <div class="card-content">
-          <p class="subtitle has-text-light" v-text="item.name" />
+          <p class="subtitle" v-text="item.name" />
         </div>
       </div>
     </div>
@@ -14,15 +14,21 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "nuxt-property-decorator";
+import Vue, { PropOptions } from "vue";
 
 interface Item {
   name: string;
   src: string;
 }
 
-@Component
-export default class UserTop extends Vue {
-  @Prop({ type: Object, required: true }) readonly items!: Item[];
-}
+export default Vue.extend({
+  name: "UserTop",
+
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    } as PropOptions<Item[]>,
+  },
+});
 </script>

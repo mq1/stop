@@ -1,24 +1,35 @@
 <template>
   <div>
-    <div class="box has-background-black" v-for="genre in genres" :key="genre.name">
-      <p class="subtitle has-text-light" v-text="genre.name" />
+    <div class="box" v-for="genre in genres" :key="genre.name">
+      <p class="subtitle" v-text="genre.name" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "nuxt-property-decorator";
+import Vue, { PropOptions } from "vue";
 
 interface Genre {
   name: string;
   score: number;
 }
 
-@Component
-export default class Genres extends Vue {
-  @Prop({ type: String, required: true }) readonly timeRange!: String;
+export default Vue.extend({
+  name: "Genres",
 
-  genres: Genre[] = [];
+  props: {
+    timeRange: {
+      type: String,
+      required: true,
+    } as PropOptions<String>,
+  },
+
+  data() {
+    return {
+      loaded: false,
+      genres: [] as Genre[],
+    };
+  },
 
   async fetch() {
     let genres: Genre[] = [];
@@ -47,6 +58,8 @@ export default class Genres extends Vue {
 
     // get only 10 items
     this.genres = genres.slice(0, 10);
-  }
-}
+
+    this.loaded = true;
+  },
+});
 </script>
