@@ -1,3 +1,3 @@
 <template>
-  <button @click="$auth.loginWith('spotify')">Login</button>
+  <b-button @click="$auth.loginWith('spotify')">Login</b-button>
 </template>
