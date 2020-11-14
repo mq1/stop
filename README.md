@@ -1,6 +1,10 @@
-# stop - top for Spotify
-
-Spotify user stats
+<center>
+    <h1>stop - top for Spotify</h1>
+    <p>An unofficial Spotify user stats viewer</p>
+    <a href="https://app.netlify.com/sites/top-for-spotify/deploys">
+        <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/51821054-4e7b-42e1-a924-e5168d4ae13d/deploy-status">
+    </a>
+</center>
 
 Inspired by [Nicholas-Lin/vibe](https://github.com/Nicholas-Lin/vibe) and [Obscurify](https://github.com/alexolivero/Obscurify)
 
