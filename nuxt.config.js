@@ -28,6 +28,7 @@ export default {
     ],
 
     router: {
+        base: '/stop/',
         middleware: ['auth']
     },
 
