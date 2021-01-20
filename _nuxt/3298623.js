@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{195:function(n,t,e){"use strict";e.r(t);var o=e(37),component=Object(o.a)({},(function(){var n=this,t=n.$createElement;return(n._self._c||t)("b-button",{on:{click:function(t){return n.$auth.loginWith("spotify")}}},[n._v("Login")])}),[],!1,null,null,null);t.default=component.exports}}]);
