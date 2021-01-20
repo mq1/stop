@@ -30,7 +30,7 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn generate
-        with:
+        env:
           BASE_URL: https://mq1.eu/stop
           SPOTIFY_CLIENT_ID: 602adbe96b424384b1f72f8ffd867457
 
