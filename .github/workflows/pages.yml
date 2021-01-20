@@ -30,6 +30,9 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn generate
+        with:
+          BASE_URL: https://mq1.eu/stop
+          SPOTIFY_CLIENT_ID: 602adbe96b424384b1f72f8ffd867457
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
