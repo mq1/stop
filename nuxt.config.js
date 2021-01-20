@@ -40,7 +40,7 @@ export default {
                 authorization_endpoint: 'https://accounts.spotify.com/authorize',
                 userinfo_endpoint: 'https://api.spotify.com/v1/me',
                 scope: ['user-top-read'],
-                redirect_uri: process.env.BASE_URL + '/login',
+                redirect_uri: process.env.BASE_URL,
                 client_id: process.env.SPOTIFY_CLIENT_ID,
             }
         }
