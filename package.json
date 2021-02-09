@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "@nuxtjs/auth": "^4.9.1",
-        "@nuxtjs/axios": "^5.13.0",
+        "@nuxtjs/axios": "^5.13.1",
         "nuxt": "^2.14.12",
         "nuxt-buefy": "^0.4.4"
     },
